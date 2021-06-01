@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+        
+	<category>
+	    <pattern>WHAT IS A *</pattern>
+	    <template>a keyboard is a mechanical device to type letters and words on a computer monitor
+	        <think><set name="topic"><star></star></set></think>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>WHO INVENTED THE *</pattern>
+        <template>An American named Christopher Latham Sholes invented the QWERTY keyboard
+            <think><set name="topic"><star></star></set></think>
+        </template>
+    </category>
+    
+    <topic name="keyboard">
+    
+    <category>
+        <pattern>WHAT BASIC TYPES OF * ARE THERE</pattern>
+        <template>a <star></star> is divided into two basic types:wired and wireless. 
+        <think><set name="topic">category</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>what different brands of * are there</pattern>
+        <template>Corsair, Razor, Logitech, Steelseries, and EVGA.
+        What brand of <star></star> do you use?
+         <think><set name="topic">brands</set></think>
+         </template>
+    </category>
+    
+    <category>
+        <pattern>Do you know you can build your own *</pattern>
+        <template>Yes! Building a custom <star></star> is really rewarding and fun as you can mix and match different keycaps and find a size perfectly for your comfort
+        <think><set name="topic">keycaps</set></think>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>What do you know about * sizes and forms</pattern>
+        <template><star></star> sizes vary from fullsize, tenkeyless, 75%, and 60%.  
+         <star></star> forms come in four layouts. The most common layout is American Standard (ANSI) in the United States. In Europe, it is known as European Standard (IS0) and in Japan as Japanese Standard (JIS). 
+        <think><set name="topic">forms</set></think>
+        </template>
+    </category>
+    
+    <topic name="keycaps">
+        <category>
+            <pattern>What keycaps do you like on your *</pattern>
+            <template>
+                <random>
+                    <li>I like Cherry</li>
+                    <li>I like SP SA</li>
+                    <li>I like Apple//c</li>
+                    <li>I like OEM</li>
+                    <li>I like Laser</li>
+                </random>
+            </template>
+        </category>
+    </topic>
+        
+    <topic name="forms">
+    
+    <category>
+        <pattern>What about gaming *</pattern>
+        <template>Gaming <star></star> are a fullsize <star></star> and deviates from the ANSI and ISO standards because it includes macro and media keys which the formers lack</template>
+    </category>
+    </topic>
+    
+    <topic name="brands">
+    
+    <category>
+        <pattern>*</pattern>
+        <template>That's a nice keyboard you have there!</template>
+    </category>
+    </topic>
+    
+    <topic name="category">
+        
+     <category>
+        <pattern>How are * connected to the computer</pattern>
+        <template>Wired <star></star> is connected through a grounded usb cable. 
+        Wireless <star></star> is connected via a bluetooth signal or a usb receiver</template>
+    </category>
+    
+    <category>
+        <pattern>IS * a kind of keyboard</pattern>
+        <template><think><set name="type"><star></star></set></think>
+            <condition name="type">
+                <li value="QWERTY"> YES, QWERTY is a kind of keyboard</li>
+                 <li value="macro pad"> YES, macro pad is a kind of keyboard</li>
+                 <li value="magic keyboard"> YES, magic keyboard is a kind of keyboard</li>
+                 <li value="ergonomic"> YES, ergonomic is a kind of keyboard</li>
+                 <li value="gaming"> YES, gaming is a kind of keyboard</li>
+                 <li>NO</li>
+            </condition>
+        </template>
+    </category>
+    </topic>
+    </topic>
+    
+    
+</aiml>
